@@ -1,0 +1,25 @@
+pedir_consulta Sonia Dr.Lopez
+alta_medico Dr.Lopez
+pedir_consulta Ramon Dr.Lopez
+pedir_consulta Sonia Dr.Lopez
+alta_medico Dra.Sanchez
+pedir_consulta Sonia Dra.Sanchez
+siguiente_paciente Dra.Sanchez
+siguiente_paciente Dra.Sanchez
+siguiente_paciente Dr.Lopez
+pedir_consulta Luis Dr.Lopez
+siguiente_paciente Dr.Lopez
+tiene_pacientes Dr.Lopez
+tiene_pacientes Dra.Sanchez
+FIN
+alta_medico Dr.Romano
+pedir_consulta Mafalda Dr.Romano
+pedir_consulta Mortadelo Dr.Romano
+siguiente_paciente Dr.Romano
+siguiente_paciente Dra.Martin
+pedir_consulta Popeye Dr.Romano
+siguiente_paciente Dr.Romano
+siguiente_paciente Dr.Romano
+siguiente_paciente Dr.Romano
+alta_medico Dr.Romano
+FIN
