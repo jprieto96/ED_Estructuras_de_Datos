@@ -45,13 +45,17 @@ public:
       if(it == conductores.end())
          throw std::domain_error("Conductor inexistente");
       else {
-         auto &l = ptos[it->valor.first];
-         it->valor.first = max(it->valor.first - p, 0);
+         auto &par = it->valor;
+         if(par.first > 0 && p > 0) {
+            auto &l = ptos[par.first];
+            par.first = max(par.first - p, 0);
 
-         l.erase(it->valor.second);
+            l.erase(par.second);
 
-         auto &nL = ptos[it->valor.first];
-         it->valor.second = nL.insert(nL.begin(), id);
+            auto &nL = ptos[par.first];
+            par.second = nL.insert(nL.begin(), id);
+         }
+         
       }
    }
 
@@ -61,13 +65,16 @@ public:
       if(it == conductores.end())
          throw std::domain_error("Conductor inexistente");
       else {
-         auto &l = ptos[it->valor.first];
-         it->valor.first = min(it->valor.first + p, MAX_PUNTOS - 1);
+         auto &par = it->valor;
+         if(par.first < 15 && p > 0) {
+            auto &l = ptos[par.first];
+            par.first = min(it->valor.first + p, MAX_PUNTOS - 1);
 
-         l.erase(it->valor.second);
+            l.erase(par.second);
 
-         auto &nL = ptos[it->valor.first];
-         it->valor.second = nL.insert(nL.begin(), id);
+            auto &nL = ptos[par.first];
+            par.second = nL.insert(nL.begin(), id);
+         }
       }
    }
 
